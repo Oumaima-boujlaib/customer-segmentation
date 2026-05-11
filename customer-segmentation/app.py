@@ -19,9 +19,9 @@ st.title("🛒 Customer Segmentation ")
 # -------------------------
 @st.cache_data
 def load():
-    kmeans = joblib.load("kmeans_model.pkl")
-    scaler = joblib.load("scaler.pkl")
-    df = pd.read_csv("customers_clustered.csv")
+    kmeans = joblib.load("customer-segmentation/kmeans_model.pkl")
+    scaler = joblib.load("customer-segmentation/scaler.pkl")
+    df = pd.read_csv("customer-segmentation/customers_clustered.csv")
     return kmeans, scaler, df
 
 kmeans, scaler, df_data = load()
